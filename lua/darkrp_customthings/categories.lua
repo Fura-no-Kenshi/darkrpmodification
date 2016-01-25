@@ -62,7 +62,7 @@ DarkRP.createCategory{
     categorises = "jobs", -- What it categorises. MUST be one of "jobs", "entities", "shipments", "weapons", "vehicles", "ammo".
     startExpanded = false, -- Whether the category is expanded when you open the F4 menu.
     color = Color(0, 255, 35, 255), -- The color of the category header.
-    canSee = function(ply) if(ply:GetNWString("usergroup") == "V.I.P"){return true}else{return false} end, -- OPTIONAL: whether the player can see this category AND EVERYTHING IN IT.
+    canSee = function(ply) if ply:GetNWString("usergroup") == "V.I.P" then return true else return false end end, -- OPTIONAL: whether the player can see this category AND EVERYTHING IN IT.
     sortOrder = 50, -- OPTIONAL: With this you can decide where your category is. Low numbers to put it on top, high numbers to put it on the bottom. It's 100 by default.
 }
 

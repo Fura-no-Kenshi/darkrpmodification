@@ -131,8 +131,8 @@ DarkRP.disabledDefaults["ammo"] = {
 Agendas
 ---------------------------------------------------------------------------]]
 DarkRP.disabledDefaults["agendas"] = {
-	["Gangster's agenda"] = false,
-	["Police agenda"] = false,
+	["Gangster's agenda"] = true,
+	["Police agenda"] = true,
 }
 
 --[[---------------------------------------------------------------------------
@@ -159,6 +159,6 @@ When anyone is demote from any job in this group, they will be temporarily banne
 from every job in the group
 ---------------------------------------------------------------------------]]
 DarkRP.disabledDefaults["demotegroups"] = {
-	["Cops"]		 = false,
-	["Gangsters"]	 = false,
+	["Cops"]		 = true,
+	["Gangsters"]	 = true,
 }

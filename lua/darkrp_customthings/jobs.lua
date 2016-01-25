@@ -39,7 +39,7 @@ TEAM_CITIZEN = DarkRP.createJob("Citoyen", {
     },
     description = [[Le citoyen est le niveau le plus fondamental de la société, vous pouvez tenir en plus d'être un clochard. 
 		Vous avez pas de rôle spécifique dans la vie de la ville.]],
-    weapons = {"weapon_fists"},
+    weapons = {},
     command = "citoyen",
     max = 0,
     salary = GAMEMODE.Config.normalsalary,
@@ -50,7 +50,7 @@ TEAM_CITIZEN = DarkRP.createJob("Citoyen", {
     category = "Citizens",
 })
 
-TEAM_POLICE = DarkRP.createJob("Policier", {
+TEAM_POLICIER = DarkRP.createJob("Policier", {
     color = Color(25, 25, 170, 255),
     model = {
 		"models/player/uk_police/uk_police_02.mdl", 
@@ -62,7 +62,7 @@ TEAM_POLICE = DarkRP.createJob("Policier", {
 		"models/player/uk_police/uk_police_08.mdl", 
 		"models/player/uk_police/uk_police_09.mdl"},
     description = [[Le Policier protége chaque citoyen qui vit dans cette ville. Vous avez le pouvoir d'arrêter les criminels et protéger les innocents.]],
-    weapons = {"weapon_fists", "arrest_stick", "unarrest_stick", "stunstick", "weaponchecker", "m9k_hk45"},
+    weapons = {"arrest_stick", "unarrest_stick", "stunstick", "weaponchecker", "m9k_hk45"},
     command = "Policier",
     max = 0,
     salary = GAMEMODE.Config.normalsalary * 1.45,
@@ -82,7 +82,7 @@ TEAM_SWAT = DarkRP.createJob("S.W.A.T.", {
 		"models/fearless/sru02.mdl", 
 		"models/fearless/sru01.mdl"},
     description = [[Le Policier protége chaque citoyen qui vit dans cette ville. Vous avez le pouvoir d'arrêter les criminels et protéger les innocents.]],
-    weapons = {"weapon_fists", "arrest_stick", "unarrest_stick", "stunstick", "weaponchecker", "fas2_mp5sd6"},
+    weapons = {"arrest_stick", "unarrest_stick", "stunstick", "weaponchecker", "fas2_mp5sd6"},
     command = "SWAT",
     max = 4,
     salary = GAMEMODE.Config.normalsalary * 1.45,
@@ -95,14 +95,14 @@ TEAM_SWAT = DarkRP.createJob("S.W.A.T.", {
     category = "Civil Protection",
 })
 
-TEAM_GANG = DarkRP.createJob("Gangster", {
+TEAM_GANGSTER = DarkRP.createJob("Gangster", {
     color = Color(0, 255, 35, 255),
     model = {
         "models/fearless/bsuit01.mdl",
         "models/fearless/bsuit04.mdl",
         "models/fearless/bsuit07.mdl"},
     description = [[Vous êtes les sous-fifres du monde de la criminalité. Suivez les ordres qui viennent d'en haut si vous voulez survivre.]],
-    weapons = {"weapon_fists"},
+    weapons = {},
     command = "gangster",
     max = 4,
     salary = GAMEMODE.Config.normalsalary,
@@ -121,7 +121,7 @@ TEAM_MAFIEUX = DarkRP.createJob("Mafieux", {
         "models/fearless/mafia07.mdl",
         "models/fearless/mafia09.mdl"},
     description = [[Vous êtes un organisation criminels. Suivez les ordres de votre parrain.]],
-    weapons = {"weapon_fists"},
+    weapons = {},
     command = "mafieux",
     max = 4,
     salary = GAMEMODE.Config.normalsalary,
@@ -136,7 +136,7 @@ TEAM_PARRAIN = DarkRP.createJob("Parrain", {
     model = {
         "models/fearless/don1.mdl"},
     description = [[Vous êtes . Suivez les ordres qui viennent d'en haut si vous voulez survivre.]],
-    weapons = {"weapon_fists", "m9k_model3russian"},
+    weapons = {"m9k_model3russian"},
     command = "Parrain",
     max = 1,
     salary = GAMEMODE.Config.normalsalary,
@@ -150,7 +150,7 @@ TEAM_CHEFGANGSTER = DarkRP.createJob("Chef Gangster", {
     color = Color(0, 255, 35, 255),
     model = {"models/fearless/02.mdl"},
     description = [[Le Chef Gangster est le patron des criminels dans la ville.]],
-    weapons = {"weapon_fists", "lockpick", "unarrest_stick"},
+    weapons = {"lockpick", "unarrest_stick"},
     command = "chefgangster",
     max = 1,
     salary = GAMEMODE.Config.normalsalary * 1.34,
@@ -179,7 +179,7 @@ TEAM_GUN = DarkRP.createJob("Vendeur d'armes", {
 			"models/player/Group01/Male_09.mdl"},
     description = [[Le Vendeur d'armes est la seule personne qui peut vendre des armes à d'autres personnes.
          Assurez-vous que vous n'êtes pas pris à vendre des armes à feu illégalement au public! Vous pourriez être arrêté!]],
-    weapons = {"weapon_fists"},
+    weapons = {},
     command = "gundealer",
     max = 2,
     salary = GAMEMODE.Config.normalsalary,
@@ -193,7 +193,7 @@ TEAM_GUARD = DarkRP.createJob("Garde du Corps", {
     color = Color(0, 255, 35, 255),
     model = {"models/player/monk.mdl"},
     description = [[on vous pays pour protéger alors férmé là et defender votre client]],
-    weapons = {"weapon_fists", "m9k_m92beretta"},
+    weapons = {"m9k_m92beretta"},
     command = "Garde",
     max = 2,
     salary = GAMEMODE.Config.normalsalary,
@@ -203,12 +203,12 @@ TEAM_GUARD = DarkRP.createJob("Garde du Corps", {
     category = "Citizens",
 })
 
-TEAM_MEDIC = DarkRP.createJob("Médecin", {
+TEAM_MEDECIN = DarkRP.createJob("Médecin", {
     color = Color(0, 255, 35, 255),
     model = {"models/player/kleiner.mdl"},
     description = [[Avec vos connaissances médicales vous travaillez pour soigner les joueurs.
          Sans un médecin, les gens ne peuvent pas être guéries.]],
-    weapons = {"med_kit", "weapon_fists", "fas2_ifak"},
+    weapons = {"med_kit", "fas2_ifak"},
     command = "Médecin",
     max = 3,
     salary = GAMEMODE.Config.normalsalary,
@@ -223,7 +223,7 @@ TEAM_COMMISSAIRE = DarkRP.createJob("Commissaire", {
     color = Color(20, 20, 255, 255),
     model = {"models/player/combine_soldier_prisonguard.mdl"},
     description = [[Le Commissaire est le chef de l'unité de protection civile. Coordonner la force de police pour faire respecter la loi dans la ville.]],
-    weapons = {"weapon_fists", "arrest_stick", "unarrest_stick", "stunstick", "door_ram", "weaponchecker", "m9k_deagle"},
+    weapons = {"arrest_stick", "unarrest_stick", "stunstick", "door_ram", "weaponchecker", "m9k_deagle"},
     command = "Commissaire",
     max = 1,
     salary = GAMEMODE.Config.normalsalary * 1.67,
@@ -231,7 +231,7 @@ TEAM_COMMISSAIRE = DarkRP.createJob("Commissaire", {
     vote = true,
     hasLicense = true,
     chief = true,
-    NeedToChangeFrom = TEAM_POLICE,
+    NeedToChangeFrom = TEAM_POLICIER,
     ammo = {
         ["pistol"] = 60,
     },
@@ -245,7 +245,7 @@ TEAM_MAIRE = DarkRP.createJob("Maire", {
 		 "models/fearless/mayor1.mdl",
 		 "models/fearless/mayor2.mdl"},
     description = [[Le maire de la ville crée des lois pour gouverner la ville.]],
-    weapons = {"weapon_fists"},
+    weapons = {},
     command = "Maire",
     max = 1,
     salary = GAMEMODE.Config.normalsalary * 1.89,
@@ -265,7 +265,7 @@ TEAM_SDF = DarkRP.createJob("S.D.F", {
          Vous mendier pour votre nourriture et l'argent
          Chantez pour obtenir de l'argent,
          Faites votre propre maison en bois]],
-    weapons = {"weapon_bugbait", "weapon_fists", "pickpocket"},
+    weapons = {"weapon_bugbait", "pickpocket"},
     command = "hobo",
     max = 0,
     salary = 0,
@@ -305,7 +305,7 @@ Define which teams belong to civil protection
 Civil protection can set warrants, make people wanted and do some other police related things
 ---------------------------------------------------------------------------]]
 GAMEMODE.CivilProtection = {
-	[TEAM_POLICE] = true,
+	[TEAM_POLICIER] = true,
 	[TEAM_SWAT] = true,
 	[TEAM_COMMISSAIRE] = true,
 	[TEAM_MAIRE] = true,
