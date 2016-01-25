@@ -23,7 +23,7 @@ Config.EconomyManagerQuickKey = true -- If this is enabled, the mayor can press 
 
 -- Bank Robbing Settings --
 Config.NoRobbingJobs = { "Policier", "Maire", "Vendeur D'armes", "Medecin", "Citoyen", "S.D.F" } -- The job names that aren't allowed to rob, can't use variables such as TEAM_POLICE
-Config.RequiredRobJobs = { "Policier" } -- How many players of one job there should be for robbing to work
+Config.RequiredRobJobs = { "Policier", "SWAT" } -- How many players of one job there should be for robbing to work
 Config.MinimumRequired = 2 -- There must at least be this many required of the jobs above for robbing to work, set 0 to disable
 Config.AutoWant = true -- Want the player when being robbed
 Config.WantMessage = "Braquage de Banque" -- The message displayed when a player begins robbing
@@ -45,7 +45,9 @@ Config.AlarmLocations = {
 	-- Where alarms are put for bank robberies
 	-- Remove these to disable alarms
 	
-	{ map = "rp_downtown_v4c_v2", model = "models/props_wasteland/speakercluster01a.mdl", pos = Vector(-1407, 214, -27), ang = Angle(0, 0, 0) },
+	{ 
+		--map = "rp_evocity2_v2p", model = "models/props_wasteland/speakercluster01a.mdl", pos = Vector(-1407, 214, -27), ang = Angle(0, 0, 0) 
+	},
 }
 
 Config.MoneyStackLocations = {
@@ -53,7 +55,7 @@ Config.MoneyStackLocations = {
 	-- Use "models/props_wasteland/speakercluster01a.mdl" as a refrence for placement
 	 
 	{ 
-		map = "rp_evocity2_v2p", pos = Vector(1068, -65, 204), ang = Angle(0, 46, 0),
+		--map = "rp_evocity2_v2p", pos = Vector(1068, -65, 204), ang = Angle(0, 46, 0),
 	},
 }
 
@@ -62,8 +64,8 @@ Config.ShelfLocations = {
 	-- Use "models/props/cs_office/shelves_metal.mdl" as a refrence for placement
 	
 	{ 
-		map = "rp_evocity2_v2p", pos = Vector(1046, -31, 204), ang = Angle(0, 90, 0),
-		map = "rp_evocity2_v2p", pos = Vector(952, 167, 204), ang = Angle(0, 0, 0),
+		--map = "rp_evocity2_v2p", pos = Vector(1046, -31, 204), ang = Angle(0, 90, 0),
+		--map = "rp_evocity2_v2p", pos = Vector(952, 167, 204), ang = Angle(0, 0, 0),
 	},
 }
 
@@ -81,14 +83,11 @@ Config.SayHintBeforeHint = true -- Display "HINT: " before hints.
 Config.Hints = {
 	-- Remember to fit these to your configuration's specifications (it doesn't do it automatically)
 	
-	"There are four different VGUI styles to choose from. You can change your current style by typing /estyle <style id>, you can enter numbers between 1-4.",
-	"The mayor makes decisions that will effect the city's reputation and bank. If the city's reputation reaches unacceptable, the mayor can be recalled by typing /recall.",
-	"Opportunities that the mayor must complete regulary occur. Sometimes there is a right answer, but even the right answer can go wrong.",
-	"Good economy allows the government to better equip theirselves. Also, it could mean a better salary for everybody.",
-	"If you're the mayor, you can use /economy or press F2 to access the Economy Manager.",
-	"Everytime you receive a paycheck, some taxes might be taken.",
-	"Work as a government officer, and you might be able to loadout with upgrades and weapons.",
-	"The mayor is able to influence economic progression. They can invest as much money into the proccess, and in turn creates profit. The more money invested, though, the longer it takes.",
+	"Le Maire peut effectuer des décisions qui influent sur l'économie de la ville. Si la réputation deviens inacceptable, vous pouvez moter une muttinerie avec /recall.",
+	"Le maire peut recevoir des demandes d'audiances. il est de sa résponsabilité de donner une bonne réponse pour améliorer le niveau de vie de la ville.",
+	"Avoir une caisse de l'état bien rempli permet de payer des chercheurs. Les recherche effectué peuvent être profitable pour tous.",
+	"Si vous êtes le maire, Vous pouvez utiliser /economy ou F2 pour gérer l'économie du serveur.",
+	"Travaillez pour le gouvernement pour avoir accès aux amélioration d'équipements."
 }
 
 -- Taxes --
@@ -109,13 +108,13 @@ Config.Perks = {
 	-- Duration is in minutes
 	-- Make sure the ID values for weapon loadouts match
 	
-	{ id = "primaryWeapons", title = "Primary Weapons", cost = 10000, duration = 60, description = [[Unlocks two-handed weaponry for government officers in their loadout]] },
-	{ id = "secondaryWeapons", title = "Secondary Weapons", cost = 5000, duration = 60, description = [[Unlocks one-handed weaponry for government officers in their loadout]] },
+	{ id = "primaryWeapons", title = "Armes ", cost = 10000, duration = 60, description = [[Débloque les armes lourdes pour les agents du gouvernements.]] },
+	{ id = "secondaryWeapons", title = "Armes de poing", cost = 5000, duration = 60, description = [[Débloque des armes de poing amélioré pour les agents du gouvernements.]] },
 	
 	-- Do not modify these ID values (you can remove the perks, though)
-	{ id = "upgrades", title = "Upgrades", cost = 10000, duration = 60, description = [[Allow government officers to upgrade their strength, resistance, and armor in their loadout]] },
-	{ id = "reputation", title = "Most Repuable", cost = 25000, duration = 60, description = [[Reputation will be doubled whenever reputation is gained]] },
-	{ id = "economy", title = "Better Economy", cost = 5000, duration = 60, description = [[People receiving a paycheck will receive twice their usual payday amount]] },
+	{ id = "upgrades", title = "Upgrades", cost = 10000, duration = 60, description = [[Permet aux agents du gouvernements d'entrainer leurs force, résistance, et débloque les armures.]] },
+	{ id = "reputation", title = "Meuilleur réputation", cost = 25000, duration = 60, description = [[Double la réputation gagnée.]] },
+	{ id = "economy", title = "Meuilleur économie", cost = 5000, duration = 60, description = [[Double le salaire de toute la ville.]] },
 }
 
 Config.WeaponsLoadout = {
@@ -142,7 +141,7 @@ Config.UpgradesLoadout = {
 Config.CurrentPerks = {} -- Used for the current perks, also can work for default perks (use ID)
 
 -- Opportunities -- 
-Config.OpportunityInterval = 300 -- The interval between opportunities given to the mayor (make this greater than the sum of the expirations)
+Config.OpportunityInterval = 500 -- The interval between opportunities given to the mayor (make this greater than the sum of the expirations)
 Config.OpportunityNotificationExpiration = 45 -- How long before the question to check the opportunity disappears
 Config.OpportunityDecisionExpiration = 300 -- How long to make an answer
 Config.OpportunityPostNotificationExpiration = 15 -- How long before the message displaying the outcome of the opportunity expires
@@ -152,10 +151,10 @@ Config.OpportunitySkipped = 5 -- How much reputation is taken when an opportunit
 Config.OpportunityMinPlayers = 1 -- How many players there must be for reputation to actually be lowered for missing an opportunity
 
 Config.Opportunities = {
-	{ title = "Research",
-	description = [[A local research center is requesting that you invest in one of their departments. You can ignore their request, but this research center has much influence. The researchers are some of the best in the world, and are sure to accomplish their goals with propper funding. There's a large demand for medical technology, but technology could be much more profitable, although risky.]],
+	{ title = "Recherche",
+	description = [[Un laboratoire local demande d'investire dans un de ces domaines. Vous pouvez ignorer cette requête, mais les centres de recherches sont souvent bénéfiques. Sans Chercheurs, les technologies actuelles n'existeraient pas. Il y a une grande demande technologique, mais la médecine pourrait sauver des vies.]],
 	choices = {
-		{ choice = "Invest in Medicine", choiceCost = 5000,
+		{ choice = "Investire dans la médecine (-5000)", choiceCost = 5000,
 			results = {
 				{ chance = 50, money = 7500, reputation = 4, message = [[Few medical advancements were made.]] },
 				{ chance = 20, money = 10000, reputation = 6, message = [[There was many advancements in medical technology.]] },
@@ -171,7 +170,7 @@ Config.Opportunities = {
 			}
 		},
 		
-		{ choice = "Invest in Technology", choiceCost = 5000,
+		{ choice = "Investir dans les nouvelles technologies (-5000)", choiceCost = 5000,
 			results = {
 				{ chance = 45, money = 10000, reputation = 5, message = [[Some new technology was invented.]] },
 				{ chance = 15, money = 20000, reputation = 8, message = [[Many new technological devices were invented.]] },
@@ -188,7 +187,7 @@ Config.Opportunities = {
 			}
 		},
 		
-		{ choice = "Ignore", choiceCost = 0,
+		{ choice = "Ignore (Gratuit)", choiceCost = 0,
 			results = {
 				{ chance = 50, money = 0, reputation = 0, message = [[You ignore the request without much problem.]] },
 				{ chance = 25, money = 0, reputation = -5, message = [[By ignoring the request, some people have lost respect for you.]] },
@@ -199,10 +198,10 @@ Config.Opportunities = {
 		}
 	}},
 	
-	{ title = "Domestic Terrorism",
-	description = [[Everything wasy going fine, until there was a threat to blow up a building. Mostly somebody tipping off that the person they knew was going to be rigging explosives to the structural foundation. What should you do about this threat?]],
+	{ title = "Terrorisme",
+	description = [[Malheur, un terroriste viens de pièger un immeuble, il y a disposer des explosifs partout. Que faut-il faire?]],
 	choices = {
-		{ choice = "Do Nothing", choiceCost = 0,
+		{ choice = "Ne rien faire.", choiceCost = 0,
 			results = {
 				{ chance = 60, money = 0, reputation = -10, message = [[The building exploded and a lot of people died.]] },
 				{ chance = 20, money = 0, reputation = -4, message = [[Nothing happened, but word got out about the threat and people are furious with your lack of action.]] },
@@ -211,7 +210,7 @@ Config.Opportunities = {
 			}
 		},
 		
-		{ choice = "Call in the FBI", choiceCost = 5000,
+		{ choice = "Envoyer une équipe d'intervention", choiceCost = 5000,
 			results = {
 				{ chance = 80, money = 0, reputation = 10, message = [[The FBI is led to a man stocked with explosives and plans to destroy the building.]] },
 				{ chance = 10, money = 20000, reputation = 8, message = [[The FBI didn't find any explosives, but they found lots of illegal contraband.]] },
@@ -221,7 +220,7 @@ Config.Opportunities = {
 			}
 		},
 		
-		{ choice = "Evacuate the Building", choiceCost = 0,
+		{ choice = "Evacuer le batiment", choiceCost = 0,
 			results = {
 				{ chance = 30, money = 0, reputation = 8, message = [[The building was evacuationed and bombs were found.]] },
 				{ chance = 30, money = 0, reputation = 0, message = [[The building was evacuationed, but no bombs were found.]] },
@@ -231,15 +230,22 @@ Config.Opportunities = {
 		}
 	}},
 	
-	{ title = "Donations for a Cause",
-	description = [[The community has raised over $100,000 to help improve the economy, but where it goes is up to you. Unemployment is at 10% and could use the money to lower it.]],
+	{ title = "Demande de donnation",
+	description = [[La communauté vous a offert $100,000 pour améliorer l'économie locale, que vas-tu faire avec?]],
 	choices = {
-		{ choice = "Raise Employment", choiceCost = 0,
+		{ choice = "Relancer l'emploi", choiceCost = 0,
 			results = {
 				{ chance = 80, money = 50000, reputation = 6, message = [[Unemployment was lowered to 4%.]] },
 				{ chance = 10, money = 125000, reputation = 8, message = [[Unemployment was lowered to 2%.]] },
 				{ chance = 8, money = 5000, reputation = 2, message = [[Unemployment only lowered to 8%.]] },
 				{ chance = 2, money = 0, reputation = 2, message = [[Unemployment didn't change.]] },
+			}
+		},
+		
+		{ choice = "Investir dans l'éducation", choiceCost = 0,
+			results = {
+				{ chance = 70, money = 150000, reputation = 8, message = [[L'éducation forme de nouveau génies, les nouvelles technologies vont évoluées.]] },
+				{ chance = 30, money = 7000, reputation = 0, message = [[Les jeunes se désintéressent de l'éducation et très peut d'évolution ont été constaté.]] },
 			}
 		},
 		
