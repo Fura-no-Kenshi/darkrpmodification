@@ -65,3 +65,108 @@ DarkRP.createAmmoType("smg1", {
 
 Add new ammo types under the next line!
 ---------------------------------------------------------------------------]]
+
+DarkRP.createAmmoType(".454 Casull", {
+    name = ".454 Casull",
+    model = "models/Items/BoxSRounds.mdl",
+    price = 120,
+    amountGiven = 12
+})
+ 
+DarkRP.createAmmoType("10x25mm", {
+    name = "10x25mm",
+    model = "models/Items/BoxSRounds.mdl",
+    price = 65,
+    amountGiven = 24
+})
+ 
+ 
+DarkRP.createAmmoType(".50 AE", {
+    name = ".50 AE",
+    model = "models/Items/BoxSRounds.mdl",
+    price = 95,
+    amountGiven = 24
+})
+DarkRP.createAmmoType(".45 ACP", {
+    name = ".45 ACP",
+    model = "models/Items/BoxSRounds.mdl",
+    price = 65,
+    amountGiven = 12
+})
+ 
+DarkRP.createAmmoType("9x18mm", {
+    name = "9x18mm",
+    model = "models/Items/BoxSRounds.mdl",
+    price = 120,
+    amountGiven = 12
+})
+ 
+DarkRP.createAmmoType(".357 SIG", {
+    name = ".357 SIG",
+    model = "models/Items/BoxSRounds.mdl",
+    price = 60,
+    amountGiven = 12
+})
+ 
+DarkRP.createAmmoType("7.62x39mm", {
+    name = "7.62x39mm",
+    model = "models/Items/BoxMRounds.mdl",
+    price = 750,
+    amountGiven = 24
+})
+ 
+DarkRP.createAmmoType("5.45x39mm", {
+    name = "5.45x39mm",
+    model = "models/Items/BoxMRounds.mdl",
+    price = 150,
+    amountGiven = 24
+})
+ 
+DarkRP.createAmmoType("7.62x51mm", {
+    name = "7.62x51mm",
+    model = "models/Items/BoxMRounds.mdl",
+    price = 550,
+    amountGiven = 24
+})
+ 
+DarkRP.createAmmoType("9x19mm", {
+    name = "9x19mm",
+    model = "models/Items/BoxMRounds.mdl",
+    price = 650,
+    amountGiven = 24
+})
+ 
+DarkRP.createAmmoType("5.56x45mm", {
+    name = "5.56x45mm",
+    model = "models/Items/BoxMRounds.mdl",
+    price = 250,
+    amountGiven = 24
+})
+ 
+DarkRP.createAmmoType("12 Gauge", {
+    name = "12Gauge",
+    model = "models/Items/BoxBuckshot.mdl",
+    price = 400,
+    amountGiven = 25
+})
+ 
+DarkRP.createAmmoType(".380ACP",{
+  name = ".380ACP",
+  model = "models/Items/BoxSRounds.mdl",
+  price = 250,
+  amountGiven = 20,
+  })
+ 
+  DarkRP.createAmmoType(".50BMG",{
+    name = ".50BMG",
+	model = "models/Items/BoxMRounds.mdl",
+	price = 350,
+	amountGiven = 12,
+})
+   
+DarkRP.createAmmoType("23x75mm",{
+	name = "23x75mm",
+	model = "models/Items/BoxMRounds.mdl",
+	price = 250,
+	amountGiven = 15,
+})
